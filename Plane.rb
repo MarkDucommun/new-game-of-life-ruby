@@ -56,7 +56,6 @@ class Plane
     @next_plane = Plane.new(living_coords)
 
     @next_plane
-
   end
 
   def should_die
