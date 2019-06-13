@@ -3,10 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="c950b322-f957-40d6-8f24-3a565616ccc3" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change afterPath="$PROJECT_DIR$/better_plane.rb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/sorted_set.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plane.rb" beforeDir="false" afterPath="$PROJECT_DIR$/Plane.rb" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/game-of-life-ruby.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/game-of-life-ruby.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_of_life.rb" beforeDir="false" afterPath="$PROJECT_DIR$/game_of_life.rb" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +21,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< Updated upstream
     <splitter split-orientation="horizontal" split-proportion="0.49458483">
       <split-first>
         <leaf>
@@ -97,6 +104,55 @@
         </leaf>
       </split-second>
     </splitter>
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/plane_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Plane.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="39" column="5" selection-start-line="37" selection-start-column="2" selection-end-line="39" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/game_of_life.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Viewport.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="580">
+              <caret line="44" column="48" selection-start-line="44" selection-start-column="48" selection-end-line="44" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/viewport_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+>>>>>>> Stashed changes
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -107,11 +163,14 @@
       </list>
     </option>
   </component>
+<<<<<<< Updated upstream
   <component name="FindInProjectRecents">
     <findStrings>
       <find>p</find>
     </findStrings>
   </component>
+=======
+>>>>>>> Stashed changes
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -122,8 +181,13 @@
         <option value="$PROJECT_DIR$/cell.rb" />
         <option value="$PROJECT_DIR$/Coord.rb" />
         <option value="$PROJECT_DIR$/spec/game_of_life_spec.rb" />
+<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/spec/viewport_spec.rb" />
+=======
+        <option value="$PROJECT_DIR$/Plane.rb" />
+>>>>>>> Stashed changes
         <option value="$PROJECT_DIR$/Viewport.rb" />
+        <option value="$PROJECT_DIR$/spec/viewport_spec.rb" />
         <option value="$PROJECT_DIR$/game_of_life.rb" />
         <option value="$PROJECT_DIR$/sorted_array.rb" />
         <option value="$PROJECT_DIR$/spec/sorted_array_spec.rb" />
@@ -144,35 +208,25 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="game-of-life-ruby" type="b2602c69:ProjectViewProjectNode" />
-              <item name="game-of-life-ruby" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="game-of-life-ruby" type="b2602c69:ProjectViewProjectNode" />
-              <item name="game-of-life-ruby" type="462c0819:PsiDirectoryNode" />
-              <item name="spec" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+<<<<<<< Updated upstream
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Errors" />
+=======
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
+>>>>>>> Stashed changes
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -406,7 +460,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560264450121</updated>
+<<<<<<< Updated upstream
       <workItem from="1560264451272" duration="33467000" />
+=======
+      <workItem from="1560264451272" duration="11259000" />
+      <workItem from="1560316787203" duration="280000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
@@ -443,7 +502,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="33467000" />
+=======
+    <option name="totallyTimeSpent" value="11539000" />
+>>>>>>> Stashed changes
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -455,9 +518,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
+<<<<<<< Updated upstream
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11993646" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -466,6 +530,11 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" sideWeight="0.49960285" weight="0.20729928" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.50039715" side_tool="true" weight="0.329927" />
+=======
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+>>>>>>> Stashed changes
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329927" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49960285" visible="true" weight="0.329927" />
@@ -473,10 +542,15 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.329927" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.49081632" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -504,6 +578,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+<<<<<<< Updated upstream
     <SUITE FILE_PATH="coverage/game_of_life_ruby@sorted_sets_can_sort_different_things__game_of_life_ruby.rcov" NAME="sorted sets can sort different things: game-of-life-ruby Coverage Results" MODIFIED="1560364046352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="game-of-life-ruby" />
     <SUITE FILE_PATH="coverage/game_of_life_ruby@sorted_sets_can_add_a_bad_sequence_of_numbers__game_of_life_ruby.rcov" NAME="sorted sets can add a bad sequence of numbers: game-of-life-ruby Coverage Results" MODIFIED="1560372638740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="game-of-life-ruby" />
     <SUITE FILE_PATH="coverage/game_of_life_ruby@sorted_arrays_can_add__game_of_life_ruby.rcov" NAME="sorted arrays can add: game-of-life-ruby Coverage Results" MODIFIED="1560347745920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="game-of-life-ruby" />
@@ -521,6 +596,17 @@
     <SUITE FILE_PATH="coverage/game_of_life_ruby@viewport_should_convert_the_current_plane_to_a_string__game_of_life_ruby.rcov" NAME="viewport should convert the current plane to a string: game-of-life-ruby Coverage Results" MODIFIED="1560289075250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="game-of-life-ruby" />
     <SUITE FILE_PATH="coverage/game_of_life_ruby@sorted_arrays__game_of_life_ruby.rcov" NAME="sorted arrays: game-of-life-ruby Coverage Results" MODIFIED="1560351575804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="game-of-life-ruby" />
     <SUITE FILE_PATH="coverage/game_of_life_ruby@Game_of_Life_alive__game_of_life_ruby.rcov" NAME="Game of Life alive: game-of-life-ruby Coverage Results" MODIFIED="1560267779700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="game-of-life-ruby" />
+=======
+    <SUITE FILE_PATH="coverage/game_of_life_ruby@Unnamed.rcov" NAME="Unnamed Coverage Results" MODIFIED="1560265155872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="game-of-life-ruby" />
+    <SUITE FILE_PATH="coverage/game_of_life_ruby@Game_of_Life_can_determine_how_many_alive_neighbors_a_cell_has__game_of_life_ruby.rcov" NAME="Game of Life can determine how many alive neighbors a cell has: game-of-life-ruby Coverage Results" MODIFIED="1560267923207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="game-of-life-ruby" />
+    <SUITE FILE_PATH="coverage/game_of_life_ruby@Game_of_Life_alive__game_of_life_ruby.rcov" NAME="Game of Life alive: game-of-life-ruby Coverage Results" MODIFIED="1560267779700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="game-of-life-ruby" />
+    <SUITE FILE_PATH="coverage/game_of_life_ruby@Game_of_Life_alive_neighbor_returns_true_if_cell_is_alive__game_of_life_ruby.rcov" NAME="Game of Life alive neighbor returns true if cell is alive: game-of-life-ruby Coverage Results" MODIFIED="1560266968595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="game-of-life-ruby" />
+    <SUITE FILE_PATH="coverage/game_of_life_ruby@Game_of_Life__game_of_life_ruby.rcov" NAME="Game of Life: game-of-life-ruby Coverage Results" MODIFIED="1560282723489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="game-of-life-ruby" />
+    <SUITE FILE_PATH="coverage/game_of_life_ruby@viewport_should_convert_the_current_plane_to_a_string__game_of_life_ruby.rcov" NAME="viewport should convert the current plane to a string: game-of-life-ruby Coverage Results" MODIFIED="1560289075250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="game-of-life-ruby" />
+    <SUITE FILE_PATH="coverage/game_of_life_ruby@Game_of_Life_Coord_can_add_coords__game_of_life_ruby.rcov" NAME="Game of Life Coord can add coords: game-of-life-ruby Coverage Results" MODIFIED="1560267366426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="game-of-life-ruby" />
+    <SUITE FILE_PATH="coverage/game_of_life_ruby@viewport_can_frame_a_plane__game_of_life_ruby.rcov" NAME="viewport can frame a plane: game-of-life-ruby Coverage Results" MODIFIED="1560288218904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="game-of-life-ruby" />
+    <SUITE FILE_PATH="coverage/game_of_life_ruby@Game_of_Life_kills_cells_with_fewer_than_two_neighbors__game_of_life_ruby.rcov" NAME="Game of Life kills cells with fewer than two neighbors: game-of-life-ruby Coverage Results" MODIFIED="1560265107201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="game-of-life-ruby" />
+>>>>>>> Stashed changes
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -556,6 +642,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$APPLICATION_HOME_DIR$/rubystubs23/struct.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -564,6 +651,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Coord.rb">
+=======
+    <entry file="file://$PROJECT_DIR$/Plane.rb">
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
@@ -572,13 +662,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Viewport.rb">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="511">
           <caret line="35" column="16" lean-forward="true" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+=======
+        <state relative-caret-position="580">
+          <caret line="44" column="48" selection-start-line="44" selection-start-column="48" selection-end-line="44" selection-end-column="48" />
+>>>>>>> Stashed changes
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/viewport_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game_of_life.rb">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="30">
           <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="109" />
         </state>
@@ -616,6 +719,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="162" column="3" selection-start-line="162" selection-start-column="3" selection-end-line="162" selection-end-column="3" />
+=======
+        <state relative-caret-position="60">
+          <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
