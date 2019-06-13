@@ -1,4 +1,4 @@
-require_relative 'sorted_set'
+require_relative '../ted_set'
 require_relative 'Coord'
 require_relative 'plane'
 require_relative 'Viewport'

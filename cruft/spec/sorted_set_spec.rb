@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative '../sorted_set'
+require_relative '../cruft/_set'
 
 describe 'sorted sets' do
   it 'can add' do

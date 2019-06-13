@@ -1,31 +1,55 @@
-require_relative 'sort_set_sorter'
 require_relative 'sort_set_builder'
+require_relative 'sort_set_finder'
 
+# A sorted set
 class SortSet
-  include SortSetSorter
   include SortSetBuilder
+  include SortSetFinder
 
-  def initialize(&sort_value)
-    @values = Array.new
-    __setup_builder__
-    __setup_sorter__ &sort_value
+  def initialize(size = 10, &sort_value)
+    setup_builder(size, &sort_value)
+    setup_finder size
   end
 
   def add(value)
 
-    return __add_to_end__ value if empty? || greater_than(value, @values.last)
+    outcome = find_index value
 
-    return __add_to_beginning__ value if less_than(value, @values.first)
+    return if outcome.is_a? IndexSuccess
 
-    __add_to_middle__ value
+    add_at(outcome.future_index, value)
   end
 
-  def empty?
-    @values.empty?
+  def include?(value)
+
+    find_index(value).is_a? IndexSuccess
+  end
+
+  def find(value)
+
+    outcome = find_index value
+
+    return if outcome.is_a? IndexFailure
+
+    values[outcome.index]
+  end
+
+  def find_or_add(value)
+
+    outcome = find_index value
+
+    add_at(outcome.future_index, value) if outcome.is_a? IndexFailure
+
+    outcome.is_a?(IndexSuccess) ? get(outcome.index) : value
+  end
+
+  def find_index(value)
+
+    find_index_internal(0, less_one(cursor), value)
   end
 
   def to_a
-    @values
+    values
   end
 end
 

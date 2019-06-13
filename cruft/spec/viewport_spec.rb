@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative '../Viewport'
+require_relative '../cruft/rt'
 
 describe 'viewport' do
 

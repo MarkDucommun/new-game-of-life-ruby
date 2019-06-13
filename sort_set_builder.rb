@@ -1,37 +1,58 @@
+require_relative 'sort_set_values'
+require_relative 'sort_set_sorter'
+
+# Builds sorted set
 module SortSetBuilder
+  include SortSetSorter
+  include SortSetValues
 
-  def __setup_builder__
-    @alternate = Array.new
+  private
+
+  attr_reader :alternate
+
+  def setup_builder(size, &sort_value)
+    setup_values(size)
+    setup_sorter(&sort_value)
+    @alternate = create_array
   end
 
-  def __add_to_end__(value)
-    @values << value
+  def add_at(index, value)
+
+    index == cursor ? add_to_end(value) : add_internal(value, index)
   end
 
-  def __add_to_beginning__(value)
-    @values.unshift value
+  def add_to_end(value)
+    set_value(cursor, value)
+    increment_cursor
   end
 
-  def __add_to_middle__(value)
+  def add_internal(value, index)
 
-    @value_added = false
+    index.times { |i| transfer_value(i, i) }
 
-    __transfer_next_and_maybe_add__ value until @values.empty?
+    set_alternate_value(index, value)
 
-    @values = @alternate
-    @alternate = Array.new
+    cursor.times { |i| transfer_value(i + index, i + index + 1) }
+
+    temp = values
+    reset_values alternate
+    reset_alternate temp
+
+    increment_cursor
   end
 
-  def __transfer_next_and_maybe_add__(value)
+  def set_alternate_value(index, value)
+    alternate[index] = value
+  end
 
-    transfer = @values.shift
+  def reset_alternate(alternate)
+    @alternate = alternate
+  end
 
-    if less_than(value, transfer) && !@value_added
-
-      @alternate << value
-      @value_added = true
-    end
-
-    @alternate << transfer
+  def transfer_value(value_index, alternate_index)
+    set_alternate_value(alternate_index, get(value_index))
   end
 end
+
+IndexSuccess = Struct.new(:index)
+IndexFailure = Struct.new(:future_index)
