@@ -10,7 +10,7 @@ to_insert = range
               .flatten
               .shuffle!
 
-set = SortSet.new max
+set = SortSet.new 100
 
 puts Benchmark.measure { to_insert.each { |i| set.add i } }
 

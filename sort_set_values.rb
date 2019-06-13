@@ -42,4 +42,12 @@ module SortSetValues
   def reset_values(values)
     @values = values
   end
+
+  def grow
+    @size *= 2
+    temp = raw_values
+    reset_values create_array
+
+    cursor.times { |index| set_value(index, temp[index]) }
+  end
 end

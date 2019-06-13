@@ -18,6 +18,8 @@ module SortSetBuilder
 
   def add_at(index, value)
 
+    grow_backing if cursor == size
+
     index == cursor ? add_to_end(value) : add_internal(value, index)
   end
 
@@ -51,6 +53,11 @@ module SortSetBuilder
 
   def transfer_value(value_index, alternate_index)
     set_alternate_value(alternate_index, get(value_index))
+  end
+
+  def grow_backing
+    grow
+    reset_alternate create_array
   end
 end
 
