@@ -15,12 +15,25 @@ class SortSetPlane
   def next
     @columns.to_a.each do |column|
       column.use_coords do |x, y|
+
         @to_examine.find_or_add(column(x)).ys.add y
+
         neighbors(x, y) do |neighbor_x, neighbor_y|
+
           @to_examine.find_or_add(column(neighbor_x)).ys.add neighbor_y
         end
       end
     end
+
+    @to_examine.to_a.each do |column|
+      column.use_coords do |x, y|
+        @lives.find_or_add(column(x)).ys.add y if should_live(x, y)
+      end
+    end
+
+    @columns = @lives
+    @to_examine = SortSet.new 100
+    @lives = SortSet.new 100
   end
 
   def living
@@ -29,24 +42,28 @@ class SortSetPlane
 
   private
 
-  def alive(x, y)
+  def should_live(x, y)
+    count = alive_neighbors(x, y)
+    count == 3 || count == 2 && alive(x, y)
+  end
 
+  def alive(x, y)
     @columns.find(coord(x, nil))&.ys&.include?(y) || false
   end
 
   def alive_neighbors(x, y)
-    neighbors(x, y, &method(:alive)).reject(&method(:nil?)).length
+    neighbors(x, y, &method(:alive)).select {|it| it}.size
   end
 end
 
 Column = Struct.new(:x, :ys) do
 
   def coords
-    ys.to_a.map { |y| coord(x, y) }
+    ys.to_a.map {|y| coord(x, y)}
   end
 
   def use_coords(&use_coord)
-    ys.to_a.map { |y| use_coord.call(x, y) }
+    ys.to_a.map {|y| use_coord.call(x, y)}
   end
 end
 
@@ -72,5 +89,5 @@ NEIGHBOR_TRANSFORMS = [
 ].freeze
 
 def neighbors(x, y, &use_neighbor)
-  NEIGHBOR_TRANSFORMS.map { |transform| use_neighbor.call(x + transform.x, y + transform.y) }
+  NEIGHBOR_TRANSFORMS.map {|transform| use_neighbor.call(x + transform.x, y + transform.y)}
 end

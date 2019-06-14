@@ -19,15 +19,13 @@ describe 'plane' do
   describe 'advancing' do
     it 'kills cells with fewer than two neighbors and more than three neighbors' do
 
-      plane.add 0, 0
-      plane.add 0, 1
-      plane.add 0, -1
-      plane.add 1, 0
       plane.add -1, 0
+      plane.add 0, 0
+      plane.add 1, 0
 
       plane.next
 
-      expect(plane.living).to eq []
+      expect(plane.living).to eq [coord(0, -1), coord(0, 0), coord(0, 1)]
     end
   end
 end
