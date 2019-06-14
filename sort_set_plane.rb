@@ -1,46 +1,61 @@
 require_relative 'sort_set'
+require_relative 'column'
 
 class SortSetPlane
 
   def initialize
-    @columns = SortSet.new(100, &:x)
-    @to_examine = SortSet.new(100, &:x)
-    @lives = SortSet.new(100, &:x)
+    @raw_living = column_set
+    @might_live = column_set
+    @will_live = column_set
   end
 
   def add(x, y)
-    @columns.find_or_add(column(x)).ys.add y
+    add_to_set(raw_living, x, y)
   end
 
   def next
-    @columns.to_a.each do |column|
-      column.use_coords do |x, y|
 
-        @to_examine.find_or_add(column(x)).ys.add y
+    generate_coords_that_might_live
 
-        neighbors(x, y) do |neighbor_x, neighbor_y|
+    evaluate_coords_that_might_live
 
-          @to_examine.find_or_add(column(neighbor_x)).ys.add neighbor_y
-        end
-      end
-    end
-
-    @to_examine.to_a.each do |column|
-      column.use_coords do |x, y|
-        @lives.find_or_add(column(x)).ys.add y if should_live(x, y)
-      end
-    end
-
-    @columns = @lives
-    @to_examine = SortSet.new 100
-    @lives = SortSet.new 100
+    reset_coord_sets
   end
 
   def living
-    @columns.to_a.map(&:coords).flatten
+    use_living(&method(:coord))
+  end
+
+  def use_living(&use_coords)
+    use_coords_from_set(raw_living, &use_coords)
   end
 
   private
+
+  attr_reader :raw_living, :might_live, :will_live
+
+  def generate_coords_that_might_live
+    use_living(&method(:add_coord_and_neighbors_to_might_live))
+  end
+
+  def add_coord_and_neighbors_to_might_live(x, y)
+    add_to_might_live(x, y)
+    neighbors(x, y, &method(:add_to_might_live))
+  end
+
+  def evaluate_coords_that_might_live
+    use_might_live(&method(:add_coord_to_will_live_if_should_live))
+  end
+
+  def add_coord_to_will_live_if_should_live(x, y)
+    add_to_will_live(x, y) if should_live(x, y)
+  end
+
+  def reset_coord_sets
+    @raw_living = will_live
+    @might_live = column_set
+    @will_live = column_set
+  end
 
   def should_live(x, y)
     count = alive_neighbors(x, y)
@@ -48,33 +63,36 @@ class SortSetPlane
   end
 
   def alive(x, y)
-    @columns.find(coord(x, nil))&.ys&.include?(y) || false
+    raw_living.find(coord(x, nil))&.ys&.include?(y) || false
   end
 
   def alive_neighbors(x, y)
-    neighbors(x, y, &method(:alive)).select {|it| it}.size
-  end
-end
-
-Column = Struct.new(:x, :ys) do
-
-  def coords
-    ys.to_a.map {|y| coord(x, y)}
+    neighbors(x, y, &method(:alive)).select { |it| it }.size
   end
 
-  def use_coords(&use_coord)
-    ys.to_a.map {|y| use_coord.call(x, y)}
+  def add_to_set(set, x, y)
+    set.find_or_add(column(x)).ys.add y
   end
-end
 
-Coord = Struct.new(:x, :y)
+  def add_to_might_live(x, y)
+    add_to_set(might_live, x, y)
+  end
 
-def coord(x, y)
-  Coord.new(x, y)
-end
+  def add_to_will_live(x, y)
+    add_to_set(will_live, x, y)
+  end
 
-def column(x)
-  Column.new(x, SortSet.new(50))
+  def use_coords_from_set(set, &use_coords)
+    set.to_a.map { |column| column.use_coords(&use_coords) }.flatten
+  end
+
+  def use_might_live(&use_coords)
+    might_live.to_a.map { |column| column.use_coords(&use_coords) }
+  end
+
+  def column_set
+    SortSet.new(100, &:x)
+  end
 end
 
 NEIGHBOR_TRANSFORMS = [
@@ -89,5 +107,5 @@ NEIGHBOR_TRANSFORMS = [
 ].freeze
 
 def neighbors(x, y, &use_neighbor)
-  NEIGHBOR_TRANSFORMS.map {|transform| use_neighbor.call(x + transform.x, y + transform.y)}
+  NEIGHBOR_TRANSFORMS.map { |transform| use_neighbor.call(x + transform.x, y + transform.y) }
 end
